@@ -61,7 +61,7 @@ export default function footer() {
             <a href="https://www.instagram.com/exdevutem" target="_blank" rel="noreferrer" className="social-icon-wrapper">
               <FaInstagram className="social-icon" />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="social-icon-wrapper">
+            <a href="https://www.linkedin.com/company/exdevutem" target="_blank" rel="noreferrer" className="social-icon-wrapper">
               <FaLinkedin className="social-icon" />
             </a>
             <a href="https://github.com/exdevutem" target="_blank" rel="noreferrer" className="social-icon-wrapper">
