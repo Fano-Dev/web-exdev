@@ -99,7 +99,7 @@ El backend se encuentra en un repositorio independiente y utiliza:
 El repositorio contiene el proyecto frontend dentro de `frontend/`.
 
 ```text
-web_exdev_v1/
+web-exdev/
 │
 ├── frontend/
 │   ├── src/
