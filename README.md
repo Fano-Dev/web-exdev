@@ -17,7 +17,7 @@ La web y la API están separadas en repositorios independientes.
 **Frontend**
 
 ```text
-web_exdev_v1
+web-exdev
 ```
 
 **API**
