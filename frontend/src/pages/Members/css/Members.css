@@ -1,0 +1,399 @@
+
+/* ===========================
+   BASE
+=========================== */
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #0C030E;
+  color: #e3e3f7;
+}
+
+/* ===========================
+   CONTENEDOR GENERAL
+=========================== */
+
+.members2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.members2 h6 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.section-members2 {
+  font-size: 1rem;
+  max-width: 80%;
+  margin: 0 auto 1.5rem;
+  line-height: 1.5;
+}
+
+.public-page > .members2 {
+  flex: 1;
+}
+
+body.light .section-members2 {
+  color: #1a1a1a;
+}
+
+/* ===========================
+   HEADER MIEMBROS
+=========================== */
+
+.members-header {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+/* ===========================
+   BOTÓN AGREGAR MIEMBRO
+=========================== */
+
+.add-member-button {
+  align-self: flex-end;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 10px;
+  background: #6d28d9;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: .25s;
+  margin-bottom: 12px;
+}
+
+.add-member-button:hover {
+  background: #7c3aed;
+  transform: translateY(-2px);
+}
+
+/* ===========================
+   FILTROS
+=========================== */
+
+.members-filter {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto 30px;
+}
+
+.member-select {
+  width: 100%;
+}
+
+/* ===========================
+   REACT SELECT
+=========================== */
+
+.member-select__control {
+  background: #1a1022 !important;
+  border: 1px solid #3b1e47 !important;
+  border-radius: 10px !important;
+  padding: 4px;
+  transition: .2s;
+}
+
+.member-select__control:hover {
+  border-color: #3a8eed !important;
+  box-shadow: 0 0 0 2px rgba(58,100,237,.15) !important;
+}
+
+.member-select__menu {
+  background: #1a1022 !important;
+  border-radius: 10px !important;
+}
+
+.member-select__option--is-focused {
+  background: #443d5e !important;
+}
+
+.member-select__option--is-selected {
+  background: #c4b5fd !important;
+  color: #111 !important;
+}
+
+/* Light */
+
+body.light .member-select__control {
+  background: #fff !important;
+  border: 1px solid #d1d5db !important;
+}
+
+body.light .member-select__control:hover {
+  border-color: #7c3aed !important;
+  box-shadow: 0 0 0 2px rgba(124,58,237,.15) !important;
+}
+
+body.light .member-select__menu {
+  background: #fff !important;
+  box-shadow: 0 8px 20px rgba(0,0,0,.08);
+}
+
+body.light .member-select__option--is-focused {
+  background: #e0f2fe !important;
+}
+
+body.light .member-select__option--is-selected {
+  background: #bae6fd !important;
+}
+
+/* ===========================
+   GRID
+=========================== */
+
+.members-main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 352px));
+  justify-content: center;
+  gap: 24px;
+  width: 100%;
+  padding: 40px 0;
+}
+
+/* ===========================
+   TARJETAS
+=========================== */
+
+.member-card {
+  cursor: pointer;
+  transition: .25s ease;
+}
+
+.member-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,.25);
+}
+
+/* ===========================
+   MENSAJES
+=========================== */
+
+.success-message {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  background: #dff7e8;
+  color: #176b3a;
+  font-weight: 600;
+  z-index: 9999;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 768px) {
+
+  .members2 {
+    padding: 24px 16px;
+  }
+
+  .members-main {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .section-members2 {
+    max-width: 100%;
+  }
+
+  .members-header {
+    align-items: center;
+  }
+
+  .add-member-button {
+    align-self: center;
+    width: 100%;
+    max-width: 280px;
+    padding: 12px 20px;
+    margin-bottom: 16px;
+  }
+
+}
+
+
+
+Projects.css
+/* PROYECTOS */
+.projects {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.public-page > .projects {
+  flex: 1;
+}
+
+.projects h2 {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 0;
+}
+
+body.light .projects h2 {
+  font-size: 2rem;
+  color: #490379;
+  margin-bottom: 0;
+}
+
+/* ===========================
+   HEADER + BOTÓN AGREGAR
+=========================== */
+
+.projects-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.add-project-button {
+  position: absolute;
+  right: 0;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 10px;
+  background: #6d28d9;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: .25s;
+}
+
+.add-project-button:hover {
+  background: #7c3aed;
+  transform: translateY(-2px);
+}
+
+body.light .add-project-button {
+  background: #490379;
+}
+
+body.light .add-project-button:hover {
+  background: #6d28d9;
+}
+
+@media (max-width: 700px) {
+  .projects-header {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .add-project-button {
+    position: static;
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+/* ===========================
+   GRID
+=========================== */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+/* ===========================
+   TARJETAS
+=========================== */
+
+.project-card {
+  background: #1a1a2e;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 10px 20px rgba(176, 132, 245, 0.3);
+}
+
+.project-card img {
+  width: 100%;
+  height: 200px;
+  display: block;
+  object-fit: cover;
+}
+
+.project-info {
+  padding: 1rem;
+  text-align: left;
+}
+
+.project-info h3 {
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.project-info p {
+  margin: 0;
+  font-size: .92rem;
+  line-height: 1.5;
+  color: #ccc;
+
+  overflow-wrap: break-word;
+  word-break: break-word;
+  white-space: normal;
+}
+
+body.light .project-info p {
+  color: #444;
+}
+
+/* ☀️ Tema claro */
+body.light {
+  background: #f9f9f9;
+  color: #1a1a2e;
+}
+
+/* HERO */
+body.light .title {
+  font-size: 2rem;
+  color: #65428A;
+  margin: 0;
+  background: linear-gradient(to right, #65428A, #0097A9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  font-weight: bold;
+}
+
+body.light .subtitle {
+  color: #444;
+  margin: 0em;
+}
+
+/* PROYECTOS */
+body.light .project-card {
+  background: #ffffff;
+  border: 1px solid #ddd;
+}
+
+body.light .project-info h3 {
+  color: #490379;
+}

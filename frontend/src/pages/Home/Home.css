@@ -1,0 +1,388 @@
+/* Estilos generales */
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #0C030E;
+  color: #e3e3f7;
+}
+
+/* Animaciones personalizadas */
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.title {
+    font-size: 2rem;
+    color: #65428A;
+    margin: 0;
+    background: linear-gradient(to right, #65428A, #0097A9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
+  animation: slideInRight 1s ease-out forwards;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #eee;
+  margin-top: 1rem;
+  margin: 0em;
+
+  animation: slideInLeft 1.2s ease-out forwards;
+  animation-delay: 0.3s;
+  opacity: 0; /* aparece solo con animación */
+}
+
+/* CARRUSEL */
+.team-carousel {
+  height: 520px;                 /* alto visible */
+  width: 100%;
+  max-width: 420px;              /* ancho tipo mockup */
+
+  /* color tomado de culture */
+  background: var(--card);
+  border-radius: 28px;
+  padding: 24px 20px;
+  overflow: hidden;
+  position: relative;
+
+  /* misma sensación de sombra */
+  box-shadow:
+    0 20px 40px rgba(0,0,0,0.35),
+    inset 0 0 0 1px rgba(255,255,255,0.05);
+}
+
+
+
+body.light .team-carousel {
+  height: 520px;                 /* alto visible */
+  width: 100%;
+  max-width: 420px;              /* ancho tipo mockup */
+  background: #ffffff;           
+  border-radius: 28px;
+  padding: 24px 20px;
+  overflow: hidden;
+  position: relative; /* ← OBLIGATORIO */
+
+  box-shadow:
+    0 8px 20px rgba(0,0,0,0.15),
+    inset 0 0 0 1px rgba(0,0,0,0.04);
+}
+
+
+.team-track {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  animation: team-slide-vertical 35s linear infinite;
+}
+
+
+/* Tamaño imágenes con animación */
+.team-track img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 18px;
+  
+
+  box-shadow:
+    0 10px 25px rgba(0,0,0,0.35);
+
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 1.5s;
+}
+
+body.light .team-track img {
+  box-shadow:
+    0 6px 16px rgba(0,0,0,0.18);
+}
+
+
+
+
+
+@keyframes team-slide-vertical {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+
+
+/* Reutilizo la animación de arriba para imágenes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+
+/* Ajustes responsivos */
+
+
+
+
+@media (max-width: 900px) {
+  .team-section {
+    flex-direction: column;
+  }
+
+  .team-left,
+  .team-right {
+    width: 100%;
+  }
+}
+
+
+.team-section {
+  display: flex;
+   align-items: flex-start; /* ← CLAVE */
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+}
+
+.public-page > .team-section {
+  flex: 1;
+}
+
+
+.team-left {
+  flex: 1;
+}
+
+.team-right {
+  flex: 1;
+}
+
+
+.team-links1 {
+  max-width: 420px;
+  width: 100%;
+  margin-bottom: 16px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 24px 20px;
+  border-radius: 16px;
+
+      /* color tomado de culture */
+  background: var(--card);
+  overflow: hidden;
+  position: relative;
+
+  /* misma sensación de sombra */
+  box-shadow:
+    0 20px 40px rgba(0,0,0,0.35),
+    inset 0 0 0 1px rgba(255,255,255,0.05);
+}
+
+body.light .team-links1 {
+  background: #ffffff;
+    box-shadow:
+    0 6px 16px rgba(0,0,0,0.15),
+    inset 0 0 0 1px rgba(0,0,0,0.04);
+
+
+}
+
+
+
+.team-links1 a {
+  font-size: 0.9rem;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  opacity: 0.85;
+  transition: opacity 0.25s ease, color 0.25s ease;
+}
+
+/* Modo oscuro */
+.team-links1 a {
+  color: #f7e3e3;
+}
+
+
+/* Modo claro */
+body.light .team-links1 a {
+  color: #250707;
+  opacity: 0.9;
+}
+
+
+.nav-btn7 {
+  padding: 0.5rem 1.1rem;
+  border-radius: 999px;
+  background: var(--card);
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid rgba(124,212,247,0.12);
+  transition:
+    background 0.25s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.nav-btn7 {
+  border-color: #0097a9;
+}
+
+body.light .nav-btn7{
+  border-color: #8d35c2;
+}
+
+
+.nav-btn7:hover {
+  background: #8d35c2;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px var(--card-shadow);
+}
+
+body.light .nav-btn7:hover {
+  background: #01b7cd;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px var(--card-shadow);
+}
+
+
+/* 📱 MODO MÓVIL */
+@media (max-width: 768px) {
+
+  .team-carousel {
+    height: auto;        /* deja de limitar altura */
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+    body.light .team-carousel {
+    height: auto;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .team-track {
+    flex-direction: row; /* 👈 CAMBIA EJE */
+    gap: 16px;
+    animation: team-slide-horizontal 25s linear infinite;
+  }
+
+
+  .team-track img {
+    width: 200px;
+    height: 160px;
+    min-width: 200px; /* importante para scroll horizontal */
+  }
+
+    .team-links1 {
+    flex-wrap: wrap;          /* permite varias filas */
+    justify-content: center;
+    gap: 0.6rem;
+    padding: 14px;
+  }
+
+  .nav-btn7 {
+    flex: 1 1 40%;            /* ocupan espacio equilibrado */
+    min-width: 120px;
+    text-align: center;
+
+    padding: 0.7rem 0.5rem;   /* más alto para el dedo */
+    font-size: 0.95rem;
+    border-radius: 14px;
+  }
+
+  .title{
+    text-align: center;
+  }
+
+  .subtitle{
+    text-align: center;
+  }
+
+
+  @keyframes team-slide-horizontal {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+
+/* 📟 TABLET REAL */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .team-links1,
+  .team-carousel {
+    width: 88%;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .team-track img {
+    width: 100%;
+    height: auto;
+  }
+
+  .team-links1 {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+  }
+
+  .nav-btn7 {
+    flex: 1 1 40%;
+    min-width: 140px;
+  }
+
+  .team-section {
+  padding-left: clamp(1rem, 4vw, 3rem);
+  padding-right: clamp(1rem, 4vw, 3rem);
+}
+
+}

@@ -1,0 +1,162 @@
+/* PROYECTOS */
+.projects {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.projects h2 {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 0;
+}
+
+body.light .projects h2 {
+  font-size: 2rem;
+  color: #490379;
+  margin-bottom: 0;
+}
+
+/* ===========================
+   HEADER + BOTÓN AGREGAR
+=========================== */
+
+.projects-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.add-project-button {
+  position: absolute;
+  right: 0;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 10px;
+  background: #6d28d9;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: .25s;
+}
+
+.add-project-button:hover {
+  background: #7c3aed;
+  transform: translateY(-2px);
+}
+
+body.light .add-project-button {
+  background: #490379;
+}
+
+body.light .add-project-button:hover {
+  background: #6d28d9;
+}
+
+@media (max-width: 700px) {
+  .projects-header {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .add-project-button {
+    position: static;
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+/* ===========================
+   GRID
+=========================== */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  align-items: start;
+}
+/* ===========================
+   TARJETAS
+=========================== */
+
+.project-card {
+  background: #1a1a2e;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 10px 20px rgba(176, 132, 245, 0.3);
+}
+
+.project-card img {
+  width: 100%;
+  height: 200px;
+  display: block;
+  object-fit: cover;
+}
+
+.project-info {
+  padding: 1rem;
+  text-align: left;
+}
+
+.project-info h3 {
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.project-info p {
+  margin: 0;
+  font-size: .92rem;
+  line-height: 1.5;
+  color: #ccc;
+
+  overflow-wrap: break-word;
+  word-break: break-word;
+  white-space: normal;
+}
+
+body.light .project-info p {
+  color: #444;
+}
+
+/* ☀️ Tema claro */
+body.light {
+  background: #f9f9f9;
+  color: #1a1a2e;
+}
+
+/* HERO */
+body.light .title {
+  font-size: 2rem;
+  color: #65428A;
+  margin: 0;
+  background: linear-gradient(to right, #65428A, #0097A9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  font-weight: bold;
+}
+
+body.light .subtitle {
+  color: #444;
+  margin: 0em;
+}
+
+/* PROYECTOS */
+body.light .project-card {
+  background: #ffffff;
+  border: 1px solid #ddd;
+}
+
+body.light .project-info h3 {
+  color: #490379;
+}

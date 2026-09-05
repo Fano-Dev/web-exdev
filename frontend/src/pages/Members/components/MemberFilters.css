@@ -1,0 +1,29 @@
+.member-filters {
+  display: flex;
+  gap: 15px;
+  width: 100%;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+
+.member-select {
+  flex: 1;
+  min-width: 220px;
+}
+
+
+/* Vista móvil */
+@media (max-width: 768px) {
+
+  .member-filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+
+  .member-select {
+    width: 100%;
+  }
+
+}

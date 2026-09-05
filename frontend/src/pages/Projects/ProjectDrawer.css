@@ -1,0 +1,457 @@
+
+/* ===========================
+   OVERLAY
+=========================== */
+
+.project-drawer-overlay {
+  position: fixed;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(4px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 1000;
+
+  padding: 20px;
+}
+
+
+/* ===========================
+   PANEL
+=========================== */
+
+.project-drawer {
+  position: relative;
+
+  width: 650px;
+  max-width: 100%;
+
+  max-height: 90vh;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  padding: 30px;
+
+  background: #ffffff;
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.25);
+
+  animation: projectDrawerAppear 0.25s ease;
+}
+
+
+/* ===========================
+   SCROLL
+=========================== */
+
+.project-drawer::-webkit-scrollbar {
+  width: 8px;
+}
+
+.project-drawer::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 20px;
+}
+
+
+/* ===========================
+   ANIMACIÓN
+=========================== */
+
+@keyframes projectDrawerAppear {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* ===========================
+   CERRAR
+=========================== */
+
+.project-drawer-close {
+  position: absolute;
+
+  top: 15px;
+  right: 15px;
+
+  border: none;
+  background: none;
+
+  font-size: 24px;
+
+  cursor: pointer;
+
+  color: #64748b;
+
+  z-index: 2;
+}
+
+.project-drawer-close:hover {
+  color: #111827;
+}
+
+
+/* ===========================
+   CONTENIDO
+=========================== */
+
+.project-drawer-content {
+  display: flex;
+
+  gap: 24px;
+
+  align-items: flex-start;
+}
+
+
+/* ===========================
+   IMAGEN
+=========================== */
+
+.project-drawer-image-wrapper {
+  flex-shrink: 0;
+}
+
+.project-drawer-image {
+  width: 220px;
+  height: 150px;
+
+  object-fit: cover;
+
+  border-radius: 14px;
+
+  border: 5px solid #f1f5f9;
+}
+
+
+/* ===========================
+   INFORMACIÓN
+=========================== */
+
+.project-drawer-info {
+  flex: 1;
+
+  min-width: 0;
+}
+
+.project-drawer-info h2 {
+  margin: 0;
+
+  font-size: 28px;
+
+  line-height: 1.2;
+
+  color: #111827;
+}
+
+
+/* ===========================
+   DESCRIPCIÓN
+=========================== */
+
+.project-drawer-description {
+  margin: 14px 0 20px;
+
+  color: #64748b;
+
+  font-size: 15px;
+
+  line-height: 1.6;
+}
+
+
+/* ===========================
+   COLUMNAS
+=========================== */
+
+.project-drawer-column {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  margin: 20px 0 0;
+}
+
+.project-drawer-column h4 {
+  color: #334155;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  margin: 0 0 8px;
+}
+
+
+/* ===========================
+   ESTADO
+=========================== */
+
+.project-status {
+  display: inline-flex;
+
+  align-items: center;
+
+  width: fit-content;
+
+  padding: 6px 12px;
+
+  border-radius: 999px;
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  border: 1px solid transparent;
+}
+
+
+/* ===========================
+   ÁREAS / TAGS
+=========================== */
+
+.project-tags-list {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  margin: 0;
+
+  padding: 0;
+
+  align-items: flex-start;
+
+  justify-content: flex-start;
+
+  height: auto;
+
+  min-height: 0;
+}
+
+.project-tags-list span {
+  display: inline-flex;
+
+  align-items: center;
+
+  width: fit-content;
+
+  padding: 6px 10px;
+
+  border-radius: 999px;
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  border: 1px solid transparent;
+
+  line-height: 1.3;
+}
+
+.project-responsible-tag {
+    background: #e2e8f0;
+  color: #334155;
+  border-color: #cbd5e1;
+}
+
+
+/* ===========================
+   COLORES DE NOTION
+=========================== */
+
+/*
+   Estos colores corresponden al color
+   que Notion devuelve para cada opción.
+
+   No se asignan por nombre de área o estado.
+*/
+
+
+/* DEFAULT */
+
+.notion-default {
+  background: #f1f1ef;
+  color: #37352f;
+  border-color: #e3e2df;
+}
+
+
+/* GRAY */
+
+.notion-gray {
+  background: #ebeced;
+  color: #5a5a5a;
+  border-color: #d8d9da;
+}
+
+
+/* BROWN */
+
+.notion-brown {
+  background: #f4eeee;
+  color: #64473a;
+  border-color: #e7d8d2;
+}
+
+
+/* ORANGE */
+
+.notion-orange {
+  background: #fbecdc;
+  color: #9a4b00;
+  border-color: #f2d4b2;
+}
+
+
+/* YELLOW */
+
+.notion-yellow {
+  background: #fbf3db;
+  color: #896b00;
+  border-color: #eddfb1;
+}
+
+
+/* GREEN */
+
+.notion-green {
+  background: #e5f2e9;
+  color: #247044;
+  border-color: #c9e3d1;
+}
+
+
+/* BLUE */
+
+.notion-blue {
+  background: #e4f0f9;
+  color: #216eaa;
+  border-color: #c6ddea;
+}
+
+
+/* PURPLE */
+
+.notion-purple {
+  background: #eeeafa;
+  color: #6940a5;
+  border-color: #ddd4f0;
+}
+
+
+/* PINK */
+
+.notion-pink {
+  background: #f9e8ef;
+  color: #ad1a72;
+  border-color: #eccddd;
+}
+
+
+/* RED */
+
+.notion-red {
+  background: #fbe9e7;
+  color: #d44c47;
+  border-color: #efcfcc;
+}
+
+
+/* ===========================
+   DARK MODE
+=========================== */
+
+body:not(.light) .project-drawer {
+  background: #ffffff;
+  color: #111827;
+}
+
+body:not(.light) .project-drawer-info h2 {
+  color: #111827;
+}
+
+body:not(.light) .project-drawer-description {
+  color: #64748b;
+}
+
+body:not(.light) .project-drawer-column h4 {
+  color: #334155;
+}
+
+body:not(.light) .project-drawer-close {
+  color: #64748b;
+}
+
+body:not(.light) .project-drawer-close:hover {
+  color: #111827;
+}
+
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 700px) {
+
+  .project-drawer {
+    padding: 20px;
+
+    border-radius: 16px;
+  }
+
+  .project-drawer-content {
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+  }
+
+  .project-drawer-image {
+    width: 100%;
+
+    height: 180px;
+  }
+
+  .project-drawer-info {
+    width: 100%;
+  }
+
+  .project-drawer-info h2 {
+    font-size: 22px;
+  }
+
+  .project-drawer-column {
+    width: 100%;
+
+    align-items: center;
+  }
+
+  .project-tags-list {
+    justify-content: center;
+  }
+
+  .project-status {
+    justify-content: center;
+  }
+}
+
