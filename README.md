@@ -706,6 +706,22 @@ Esta organización permite mantener separadas la presentación, la comunicación
 
 ---
 
+## Créditos
+
+La aplicación web parte de una implementación original desarrollada por Ian Battistoni (https://github.com/IanBattistoni), disponible originalmente en el repositorio (https://github.com/IanBattistoni/exdev-website).
+
+El proyecto fue posteriormente adaptado y extendido para EXDEV Club.
+
+Las modificaciones actuales incluyen, entre otras:
+
+* adaptación de la interfaz;
+* integración con la API de EXDEV Club;
+* desarrollo de la API con Hono;
+* integración con Notion;
+* configuración para Cloudflare Workers.
+
+---
+
 # 🚧 Próximos pasos
 
 El proyecto se encuentra actualmente en desarrollo.
